@@ -7,7 +7,6 @@
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
           crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/css/index.css">
-    <script src="../source/index.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -22,17 +21,15 @@
             </th>
             <th colspan="3">
                 <div class="calendar-options">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>All members</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select id="members-select" class="form-select" aria-label="Default select example">
+                        <option value="all-members" selected>All members</option>
                     </select>
-                    <button class="btn btn-primary">New Event +</button>
+                    <a class="btn btn-primary" href="create-event.html">New Event +</a>
                 </div>
             </th>
         </tr>
         </thead>
+        <tbody class="calendar-body">
         <tr>
             <th>Name</th>
             <th>Mon</th>
@@ -41,263 +38,180 @@
             <th>Thu</th>
             <th>Fri</th>
         </tr>
-        <tr>
+        <tr class="ten">
             <td>10:00</td>
-            <td>
-                <div class="event-cell">
-                    Something
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayTen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-                    SomethingSomesdfsdfsfsdfthingSomethingSomesdfsdfsfsdfthingSomethingSomesdfsdfsfsdfthing
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayTen"></div>
             </td>
-            <td>
-
-                <div class="event-cell">
-                    <div>
-                        Text
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                    </svg>
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayTen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>SomethingSomesdfsdfsfsdfthing</td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayTen"></div>
+            </td>
+            <td class="event-cell friday">
+                <div id="fridayTen"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="eleven">
             <td>11:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayEleven"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayEleven"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>dgdgdgdfgd</td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayEleven"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayEleven"></div>
+            </td>
+            <td class="event-cell friday">
+                <div id="fridayEleven"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="twelve">
             <td>12:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayTwelve"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayTwelve"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayTwelve"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayTwelve"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridayTwelve"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="thirteen">
             <td>13:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayThirteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayThirteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayThirteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayThirteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridayThirteen"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="fourteen">
             <td>14:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayFourteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayFourteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayFourteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayFourteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridayFourteen"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="fifteen">
             <td>15:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayFifteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayFifteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayFifteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayFifteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridayFifteen"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="sixteen">
             <td>16:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondaySixteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdaySixteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdaySixteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdaySixteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridaySixteen"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="seventeen">
             <td>17:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondaySeventeen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdaySeventeen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdaySeventeen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdaySeventeen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridaySeventeen"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="eighteen">
             <td>18:00</td>
-            <td>
-                <div class="event-cell">
 
-                </div>
+            <td class="event-cell monday">
+                <div id="mondayEighteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell tuesday">
+                <div id="tuesdayEighteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell wednesday">
+                <div id="wednesdayEighteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell thursday">
+                <div id="thursdayEighteen"></div>
             </td>
-            <td>
-                <div class="event-cell">
-
-                </div>
+            <td class="event-cell friday">
+                <div id="fridayEighteen"></div>
             </td>
         </tr>
+        </tbody>
     </table>
 </div>
+
+<script src="../source/index.js"></script>
 </body>
 </html>
