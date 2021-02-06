@@ -1,9 +1,7 @@
 
-console.log(localStorage.getItem("eventList"));
 const members = JSON.parse(localStorage.getItem("members"));
 const eventList = JSON.parse(localStorage.getItem("eventList"));
-console.log(members);
-console.log(eventList);
+
 //adding membersSelect
 const membersSelect = document.getElementById("members-select");
 
