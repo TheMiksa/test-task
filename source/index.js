@@ -47,16 +47,14 @@ const eventList = {
     },
     thursday: {
         thirteen: {
-            members: "Petter" ,
-            membersId: "memberda7542bc41",
+            membersId: ["memberda7542bc41"],
             eventText: "Stand Up3",
             eventId: "thursdayThirteen"
         },
     },
     friday: {
         fourteen: {
-            members: "Petter" ,
-            membersId: "memberda7542bc41",
+            membersId: ["memberda7542bc41"],
             eventText: "Stand Up4",
             eventId: "fridayFourteen"
         },
@@ -73,11 +71,8 @@ const onEventFilter = (eventDate, memberId) => {
     const evTd = evDiv.parentNode;
     //
     if (memberId && !eventDate.membersId.includes(memberId)) {
-        console.log(memberId);
         const newDivId = evDiv.id;
-        console.log(newDivId);
         evTd.removeChild(evDiv);
-        //removing the event from eventList (eventDate)
 
         const newDiv = document.createElement("div");
         newDiv.id = newDivId;
@@ -97,10 +92,10 @@ const onEventFilter = (eventDate, memberId) => {
         xImg.src = "../styles/svg/x.svg";
         xImg.alt = "X";
         xImg.onclick = (e) => {
-
+            const evRemoved = confirm(`Are you sure you want to delete ${evText.innerText} event?`);
+            if (!evRemoved) return;
             const newDivId = evDiv.id;
             evTd.removeChild(evDiv);
-            //removing the event from eventList (eventDate)
 
             const newDiv = document.createElement("div");
             newDiv.id = newDivId;
@@ -143,12 +138,9 @@ for (let member of members) {
 }
 
 membersSelect.onchange = (e) => {
-    console.log(e.target)
     if (e.target.value === "all-members") {
-        console.log("all members");
         getAllEvents();
     } else {
-        console.log("Current member is " + e.target.value);
         getMemberEvents(e.target.value);
     }
 

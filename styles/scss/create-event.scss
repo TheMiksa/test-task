@@ -1,0 +1,17 @@
+.event-form-box {
+  width: 30%;
+  margin: auto;
+  background-color: palegreen;
+}
+.option-box {
+  width: content-box;
+  margin: 5px;
+
+  background-color: seagreen;
+  display: flex;
+  justify-content: space-between;
+  input, select {
+    width: 50%;
+    height: 40px;
+  }
+}

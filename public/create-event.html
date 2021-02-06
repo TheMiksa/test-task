@@ -6,10 +6,49 @@
           rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/css/index.css">
-    <script src="../source/index.js"></script>
-    <title>Title</title>
+    <link rel="stylesheet" href="../styles/css/create-event.css">
+    <script src="../source/create-event.js"></script>
+    <title>Create event</title>
 </head>
 <body>
+    <div class="event-form-box">
+        <form action="">
+            <div class="option-box">
+                <label for="event-name">Name of the event:</label>
+                <input type="text">
+            </div>
+            <div class="option-box">
+                <label for="members">Members: </label>
+                <select name="members" id="members">
+                    <options value="all">All members</options>
+                    <options value="Petter">Petter</options>
+                    <options value="Marya">Marya</options>
+                    <options value="Bob">Bob</options>
+                </select>
+            </div>
+            <div class="option-box">
+                <label for="day">Day:</label>
+                <select name="day" id="day">
+                    <options value="all">All members</options>
+                    <options value="Petter">Petter</options>
+                    <options value="Marya">Marya</options>
+                    <options value="Bob">Bob</options>
+                </select>
+            </div>
+            <div class="option-box">
+                <label for="time">Time:</label>
+                <select name="time" id="time">
+                    <options value="all">All members</options>
+                    <options value="Petter">Petter</options>
+                    <options value="Marya">Marya</options>
+                    <options value="Bob">Bob</options>
+                </select>
+            </div>
+        </form>
+        <div class="form-action-box">
+            <a href="calendar.html" class="btn btn-danger">Cancel</a>
+            <button class="btn btn-success">Create</button>
+        </div>
+    </div>
 </body>
 </html>
