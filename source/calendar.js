@@ -1,4 +1,3 @@
-
 const members = JSON.parse(localStorage.getItem("members"));
 const eventList = JSON.parse(localStorage.getItem("eventList"));
 
@@ -54,7 +53,7 @@ const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
             const evRemoved = confirm(`Are you sure you want to delete ${evText.innerText} event?`);
             if (!evRemoved) return;
 
-            const newEventList = Object.assign(eventList);
+            const newEventList = Object.assign({}, eventList);
             delete newEventList[eventDay][eventTime];
             localStorage.setItem("eventList", JSON.stringify(newEventList));
 
@@ -76,7 +75,7 @@ const getMemberEvents = (memberId) => {
 
     for (let eventDay in eventList) {
         for (let eventTime in eventList[eventDay]) {
-                onEventFilter(eventList[eventDay][eventTime], memberId, eventDay, eventTime);
+            onEventFilter(eventList[eventDay][eventTime], memberId, eventDay, eventTime);
         }
     }
 };
@@ -90,9 +89,6 @@ const getAllEvents = () => {
     }
 
 };
-
-
-
 
 
 getAllEvents();

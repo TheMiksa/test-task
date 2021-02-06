@@ -45,13 +45,13 @@ const onEventCreate = () => {
     }
     else if (!untestedNewEvent || untestedNewEvent && !Object.keys(untestedNewEvent)) {
 
-        const newEventList = Object.assign(eventList);
+        const newEventList = Object.assign({}, eventList);
         const eventId = eventDay + eventTime[0].toUpperCase() + eventTime.slice(1);
 
         let membersId = [];
         if (eventMembers === "all") {
             for (let member in members) {
-                membersId[membersId.length] = members[member].id;
+                membersId.push(members[member].id);
             }
         } else membersId = [eventMembers];
 
