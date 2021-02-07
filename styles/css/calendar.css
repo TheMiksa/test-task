@@ -1,0 +1,57 @@
+.calendar {
+  margin: 10px auto 0;
+  width: content-box;
+}
+
+.calendar-header > tr th {
+  border: 0;
+}
+.calendar-header > tr :first-child {
+  text-align: left;
+}
+
+.calendar-options {
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-options select {
+  width: 50%;
+}
+.calendar-options button {
+  width: 40%;
+}
+
+.select-user {
+  width: 200px;
+}
+
+.calendar-table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.calendar-table th, td {
+  border: solid 1px gray;
+  min-width: 150px;
+  max-width: 250px;
+  height: 40px;
+}
+
+.event-cell {
+  padding: 5px;
+}
+.event-cell > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+th, td:first-child {
+  text-align: center;
+}
+
+td:not(:first-child) {
+  word-break: break-word;
+}
+
+/*# sourceMappingURL=calendar.css.map */

@@ -1,0 +1,27 @@
+.event-form-box {
+  width: 30%;
+  margin: 20px auto auto;
+}
+.event-form-box input, .event-form-box select, .event-form-box button {
+  outline: none;
+}
+
+.option-box {
+  width: content-box;
+  margin: 25px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.option-box input, .option-box select {
+  width: 50%;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px darkgray solid;
+  background-color: #F4FFE3;
+}
+
+.form-action-box {
+  float: right;
+}
+
+/*# sourceMappingURL=create-event.css.map */
