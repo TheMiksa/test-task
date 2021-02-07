@@ -9,7 +9,7 @@ const onEventCreate = () => {
         nameTip.innerText = tipText;
         nameTip.style.position = "absolute";
         nameTip.style.right = "2px";
-        nameTip.style.top = "-20px";
+        nameTip.style.top = "-25px";
         nameTip.style.color = "tomato";
         if (problemElements.length > 1) {
             document.querySelector(".option-box-day").append(nameTip);
@@ -41,11 +41,11 @@ const onEventCreate = () => {
             document.getElementById("event-day"),
             document.getElementById("event-time")
         ];
-        onEventCreateProblem("Sorry, this event is already been", eventDate);
+        onEventCreateProblem("Sorry, this slot is already taken", eventDate);
     }
     else if (!untestedNewEvent || untestedNewEvent && !Object.keys(untestedNewEvent)) {
 
-        const newEventList = Object.assign(eventList);
+        const newEventList = Object.assign({}, eventList);
         const eventId = eventDay + eventTime[0].toUpperCase() + eventTime.slice(1);
 
         let membersId = [];

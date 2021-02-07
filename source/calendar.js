@@ -27,7 +27,7 @@ membersSelect.onchange = (e) => {
 const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
     const evDiv = document.getElementById(eventDate.eventId);
     const evTd = evDiv.parentNode;
-    //
+
     if (memberId && !eventDate.membersId.includes(memberId)) {
         const newDivId = evDiv.id;
         evTd.removeChild(evDiv);
@@ -39,7 +39,6 @@ const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
         return;
 
     }
-    //
 
     if (!evDiv.innerText) {
         evTd.style.backgroundColor = "#B7EC65";
@@ -47,14 +46,14 @@ const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
         const evText = document.createElement("span");
         evText.innerText = eventDate.eventText;
 
-        const xImg = document.createElement("img");
-        xImg.src = "../styles/svg/x.svg";
-        xImg.alt = "X";
-        xImg.onclick = (e) => {
+        const deleteSymbol = document.createElement("span");
+        deleteSymbol.innerHTML = "&times;";
+        deleteSymbol.onclick = (e) => {
             const evRemoved = confirm(`Are you sure you want to delete ${evText.innerText} event?`);
+
             if (!evRemoved) return;
 
-            const newEventList = Object.assign(eventList);
+            const newEventList = Object.assign({}, eventList);
             delete newEventList[eventDay][eventTime];
             localStorage.setItem("eventList", JSON.stringify(newEventList));
 
@@ -67,13 +66,11 @@ const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
             evTd.append(newDiv);
 
         };
-        evDiv.prepend(evText, xImg);
+        evDiv.prepend(evText, deleteSymbol);
     }
 };
 
-
 const getMemberEvents = (memberId) => {
-
     for (let eventDay in eventList) {
         for (let eventTime in eventList[eventDay]) {
                 onEventFilter(eventList[eventDay][eventTime], memberId, eventDay, eventTime);
@@ -82,17 +79,12 @@ const getMemberEvents = (memberId) => {
 };
 
 const getAllEvents = () => {
-
     for (let eventDay in eventList) {
         for (let eventTime in eventList[eventDay]) {
             onEventFilter(eventList[eventDay][eventTime], null, eventDay, eventTime);
         }
     }
-
 };
-
-
-
 
 
 getAllEvents();
