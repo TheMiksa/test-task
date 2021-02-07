@@ -51,7 +51,7 @@ const onEventCreate = () => {
         let membersId = [];
         if (eventMembers === "all") {
             for (let member in members) {
-                membersId[membersId.length] = members[member].id;
+                membersId.push(members[member].id);
             }
         } else membersId = [eventMembers];
 

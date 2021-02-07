@@ -1,4 +1,3 @@
-
 const members = JSON.parse(localStorage.getItem("members"));
 const eventList = JSON.parse(localStorage.getItem("eventList"));
 
@@ -73,7 +72,7 @@ const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
 const getMemberEvents = (memberId) => {
     for (let eventDay in eventList) {
         for (let eventTime in eventList[eventDay]) {
-                onEventFilter(eventList[eventDay][eventTime], memberId, eventDay, eventTime);
+            onEventFilter(eventList[eventDay][eventTime], memberId, eventDay, eventTime);
         }
     }
 };
