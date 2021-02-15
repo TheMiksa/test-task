@@ -1,7 +1,6 @@
 const members = JSON.parse(localStorage.getItem("members"));
 const eventList = JSON.parse(localStorage.getItem("eventList"));
 
-//adding membersSelect
 const membersSelect = document.getElementById("members-select");
 
 for (let member of members) {
@@ -20,8 +19,6 @@ membersSelect.onchange = (e) => {
     }
 
 };
-//
-
 
 const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
     const evDiv = document.getElementById(eventDate.eventId);
@@ -47,7 +44,8 @@ const onEventFilter = (eventDate, memberId, eventDay, eventTime) => {
 
         const deleteSymbol = document.createElement("span");
         deleteSymbol.innerHTML = "&times;";
-        deleteSymbol.onclick = (e) => {
+        deleteSymbol.className = "delete-symbol";
+        deleteSymbol.onclick = () => {
             const evRemoved = confirm(`Are you sure you want to delete ${evText.innerText} event?`);
 
             if (!evRemoved) return;
@@ -84,6 +82,5 @@ const getAllEvents = () => {
         }
     }
 };
-
 
 getAllEvents();

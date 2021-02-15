@@ -47,10 +47,6 @@
   }
 }
 
-th, td:first-child {
-  text-align: center;
-}
-td:not(:first-child) {
-
-  word-break: break-word;
+.delete-symbol {
+  cursor: pointer;
 }

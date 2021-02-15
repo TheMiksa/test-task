@@ -1,6 +1,6 @@
 # test-task
-1. To run this application you’ll want to clone this repo and open calendar.html file
-2. This applicaion allows to view the Events Table for the whole team or a separate team member, add and remove the Event
+1. To run this application you’ll want to clone this repo and open calendar.html file.
+2. This application allows to view the Events Table for the whole team or a separate team member, add and remove the Event.
 
 ![Иллюстрация к проекту](/2021-02-12_17-55.png)
 ![Иллюстрация к проекту](/2021-02-12_17-55_1.png)
