@@ -1,4 +1,4 @@
-# test-task
+# Calendar of events
 1. To run this application you’ll want to clone this repo and open calendar.html file.
 2. This application allows to view the Events Table for the whole team or a separate team member, add and remove the Event.
 
